@@ -1,8 +1,7 @@
-import { getAllPublishedPosts } from "@/lib/blog/repository";
+import { blogPosts } from "@/lib/content/blog/posts";
 import { siteConfig } from "@/lib/site";
 
-export async function GET() {
-  const blogPosts = await getAllPublishedPosts();
+export function GET() {
   const items = blogPosts
     .map(
       (post) => `

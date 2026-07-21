@@ -64,5 +64,7 @@ export const siteConfig = {
   },
   contact: {
     email: "hello@adxplore.ir",
+    phone: "+989381811680",
+    phoneDisplay: "۰۹۳۸ ۱۸۱ ۱۶۸۰",
   },
 } as const;

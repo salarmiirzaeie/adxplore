@@ -1,11 +1,10 @@
 import type { MetadataRoute } from "next";
-import { getAllPublishedPosts } from "@/lib/blog/repository";
+import { blogPosts } from "@/lib/content/blog/posts";
 import { siteConfig } from "@/lib/site";
 import { guidePages } from "@/lib/content/guides";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
-  const blogPosts = await getAllPublishedPosts();
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: siteConfig.url, lastModified: now, changeFrequency: "daily", priority: 1 },

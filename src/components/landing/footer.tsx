@@ -27,10 +27,10 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {[
                 { href: "/#how-it-works", label: "نحوه کار" },
-                { href: "/#register", label: "ثبت‌نام اولیه" },
-                { href: "/blog", label: "مجله" },
                 { href: "/guides", label: "راهنماها" },
+                { href: "/blog", label: "مجله" },
                 { href: "/#faq", label: "سوالات پرتکرار" },
+                { href: `tel:${siteConfig.contact.phone}`, label: "تماس" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="transition hover:text-purple-muted">
@@ -62,6 +62,15 @@ export function Footer() {
           <div>
             <p className="font-bold text-white">ارتباط با ما</p>
             <ul className="mt-3 space-y-2 text-sm">
+              <li>
+                <a
+                  href={`tel:${siteConfig.contact.phone}`}
+                  className="transition hover:text-purple-muted"
+                  dir="ltr"
+                >
+                  {siteConfig.contact.phoneDisplay}
+                </a>
+              </li>
               <li>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}

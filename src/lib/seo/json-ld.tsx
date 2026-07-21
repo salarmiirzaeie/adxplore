@@ -48,7 +48,7 @@ export function webApplicationJsonLd() {
       "@type": "Offer",
       price: "0",
       priceCurrency: "IRR",
-      description: "ثبت‌نام اولیه رایگان برای برندها و بلاگرها",
+      description: "راهنماها و مقالات رایگان تبلیغات اینستاگرام",
     },
     description: siteConfig.description,
     inLanguage: "fa-IR",

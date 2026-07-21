@@ -78,10 +78,10 @@ export default async function GuidePage({ params }: Props) {
         <aside className="mt-12 rounded-2xl border border-purple/20 bg-surface p-8 text-center">
           <p className="text-lg font-bold text-navy">{guide.cta}</p>
           <Link
-            href="/#register"
+            href="/guides"
             className="btn-primary mt-5 inline-block rounded-xl px-6 py-3 text-sm font-bold"
           >
-            ثبت‌نام اولیه رایگان
+            مشاهده همه راهنماها
           </Link>
         </aside>
       </main>

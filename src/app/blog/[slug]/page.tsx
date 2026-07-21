@@ -5,7 +5,10 @@ import { Footer } from "@/components/landing/footer";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { ContentRenderer } from "@/components/blog/content-renderer";
 import { RelatedPosts } from "@/components/blog/related-posts";
-import { getAllBlogSlugs, getBlogPostBySlug } from "@/lib/blog/repository";
+import {
+  getAllBlogSlugs,
+  getBlogPost,
+} from "@/lib/content/blog/posts";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import {
   JsonLd,
@@ -15,14 +18,13 @@ import {
 
 type Props = { params: Promise<{ slug: string }> };
 
-export async function generateStaticParams() {
-  const slugs = await getAllBlogSlugs();
-  return slugs.map((slug) => ({ slug }));
+export function generateStaticParams() {
+  return getAllBlogSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const post = await getBlogPostBySlug(slug);
+  const post = getBlogPost(slug);
   if (!post) return {};
 
   return buildPageMetadata({
@@ -39,7 +41,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const post = await getBlogPostBySlug(slug);
+  const post = getBlogPost(slug);
   if (!post) notFound();
 
   return (
@@ -84,16 +86,16 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
 
         <aside className="mt-12 rounded-2xl border border-purple/20 bg-purple/5 p-6">
-          <p className="font-bold text-navy">آماده شروع کمپین هستید؟</p>
+          <p className="font-bold text-navy">بیشتر بدانید</p>
           <p className="mt-2 text-sm text-muted">
-            در ادکسپلور مستقیماً با بلاگر همکاری کنید — بدون آژانس و با پرداخت
-            امن.
+            راهنماهای تخصصی ادکسپلور برای ساخت کمپین تبلیغات اینستاگرام و همکاری
+            با بلاگر.
           </p>
           <Link
-            href="/#register"
+            href="/guides"
             className="btn-primary mt-4 inline-block rounded-xl px-5 py-2.5 text-sm font-bold"
           >
-            ثبت‌نام رایگان
+            مشاهده راهنماها
           </Link>
         </aside>
 

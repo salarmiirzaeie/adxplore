@@ -1,5 +1,5 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
-import { getAllPublishedPosts } from "@/lib/blog/repository";
+import { blogPosts } from "@/lib/content/blog/posts";
 import { Header } from "@/components/landing/header";
 import { Hero } from "@/components/landing/hero";
 import { HowItWorks } from "@/components/landing/how-it-works";
@@ -29,9 +29,7 @@ export const metadata = buildPageMetadata({
   ],
 });
 
-export default async function HomePage() {
-  const posts = await getAllPublishedPosts();
-
+export default function HomePage() {
   return (
     <>
       <JsonLd data={organizationJsonLd()} />
@@ -44,7 +42,7 @@ export default async function HomePage() {
         <Hero />
         <HowItWorks />
         <EscrowValue />
-        <BlogPreview posts={posts} />
+        <BlogPreview posts={blogPosts} />
         <Faq />
         <SeoTopics />
       </main>

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { siteConfig } from "@/lib/site";
 
-export const alt = `${siteConfig.name} — ${siteConfig.tagline}`;
+export const alt = `${siteConfig.nameEn} — Instagram influencer marketing platform`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -19,7 +19,6 @@ export default function OgImage() {
           padding: "72px",
           background: "linear-gradient(145deg, #0B1120 0%, #0F172A 35%, #1e1b4b 70%, #312e81 100%)",
           fontFamily: "sans-serif",
-          direction: "rtl",
         }}
       >
         <div
@@ -28,17 +27,19 @@ export default function OgImage() {
             flexDirection: "column",
             alignItems: "flex-end",
             gap: "20px",
+            width: "100%",
           }}
         >
           <div
             style={{
-              fontSize: 68,
+              fontSize: 72,
               fontWeight: 800,
               color: "white",
               lineHeight: 1.2,
+              letterSpacing: "-0.02em",
             }}
           >
-            {siteConfig.name}
+            {siteConfig.nameEn}
           </div>
           <div
             style={{
@@ -49,7 +50,18 @@ export default function OgImage() {
               lineHeight: 1.5,
             }}
           >
-            {siteConfig.tagline}
+            Direct Instagram Influencer Marketing
+          </div>
+          <div
+            style={{
+              fontSize: 24,
+              color: "#E9D5FF",
+              maxWidth: 900,
+              textAlign: "right",
+              lineHeight: 1.4,
+            }}
+          >
+            No agency. Secure escrow payments. Built for Iran.
           </div>
           <div
             style={{

@@ -1,16 +1,18 @@
-import Link from "next/link";
 import { PostCard } from "@/components/blog/post-card";
-import { getAllPublishedPosts } from "@/lib/blog/repository";
+import { blogPosts } from "@/lib/content/blog/posts";
 
 type RelatedPostsProps = {
   currentSlug: string;
   category: string;
 };
 
-export async function RelatedPosts({ currentSlug, category }: RelatedPostsProps) {
-  const posts = await getAllPublishedPosts();
-  const sameCategory = posts.filter((post) => post.slug !== currentSlug && post.category === category);
-  const others = posts.filter((post) => post.slug !== currentSlug && post.category !== category);
+export function RelatedPosts({ currentSlug, category }: RelatedPostsProps) {
+  const sameCategory = blogPosts.filter(
+    (post) => post.slug !== currentSlug && post.category === category,
+  );
+  const others = blogPosts.filter(
+    (post) => post.slug !== currentSlug && post.category !== category,
+  );
   const related = [...sameCategory, ...others].slice(0, 3);
 
   if (related.length === 0) return null;

@@ -2,7 +2,7 @@ import { Header } from "@/components/landing/header";
 import { Footer } from "@/components/landing/footer";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { PostCard } from "@/components/blog/post-card";
-import { getAllPublishedPosts } from "@/lib/blog/repository";
+import { blogPosts } from "@/lib/content/blog/posts";
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import {
   JsonLd,
@@ -22,9 +22,7 @@ export const metadata = buildPageMetadata({
   ],
 });
 
-export default async function BlogIndexPage() {
-  const blogPosts = await getAllPublishedPosts();
-
+export default function BlogIndexPage() {
   return (
     <>
       <JsonLd

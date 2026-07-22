@@ -77,9 +77,11 @@ export const metadata: Metadata = {
     telephone: true,
     email: true,
   },
-  ...(process.env.GOOGLE_SITE_VERIFICATION
-    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
-    : {}),
+  verification: {
+    google:
+      process.env.GOOGLE_SITE_VERIFICATION ??
+      "wsEDnwSkeBvH5s1BBOTKrRCRBH8d3RdjsWMHg51Lysk",
+  },
 };
 
 export default function RootLayout({

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { ContentSection } from "@/lib/content/types";
 
 export function ContentRenderer({ sections }: { sections: ContentSection[] }) {
@@ -24,6 +25,20 @@ export function ContentRenderer({ sections }: { sections: ContentSection[] }) {
                 >
                   <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-purple" />
                   {item}
+                </li>
+              ))}
+            </ul>
+          )}
+          {section.links && section.links.length > 0 && (
+            <ul className="mt-4 space-y-2 rounded-2xl border border-purple/15 bg-purple/5 p-4">
+              {section.links.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm font-semibold text-purple hover:underline"
+                  >
+                    {link.label} ←
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -2,6 +2,7 @@ export type ContentSection = {
   heading?: string;
   paragraphs: string[];
   list?: string[];
+  links?: { href: string; label: string }[];
 };
 
 export type BlogPost = {

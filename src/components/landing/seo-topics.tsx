@@ -48,6 +48,24 @@ export function SeoTopics() {
               {link.label}
             </Link>
           ))}
+          <Link
+            href="/blog/tabligat-instagram-foroshgah"
+            className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
+          >
+            تبلیغات برای فروشگاه
+          </Link>
+          <Link
+            href="/blog/reels-tabligat-instagram"
+            className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
+          >
+            تبلیغات ریلز
+          </Link>
+          <Link
+            href="/blog/10-eshtebah-tabligat-instagram"
+            className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
+          >
+            اشتباهات رایج
+          </Link>
         </nav>
       </div>
     </section>

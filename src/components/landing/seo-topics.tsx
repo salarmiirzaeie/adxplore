@@ -22,16 +22,23 @@ export function SeoTopics() {
             تبلیغات اینستاگرام
           </Link>
           ،{" "}
+          <Link href="/guides/gheymat-tabligat-instagram" className="text-purple hover:underline">
+            قیمت تبلیغات اینستاگرام
+          </Link>
+          ،{" "}
+          <Link
+            href="/blog/hazine-tabligat-instagram-bar-asas-follower"
+            className="text-purple hover:underline"
+          >
+            هزینه تبلیغات در اینستاگرام بر اساس فالوور
+          </Link>
+          ،{" "}
           <Link href="/guides/bazaryabi-influencer" className="text-purple hover:underline">
             بازاریابی اینفلوئنسر
           </Link>
-          ،{" "}
+          {" "}و{" "}
           <Link href="/guides/hamkari-ba-blogger" className="text-purple hover:underline">
             همکاری با بلاگر
-          </Link>
-          {" "}و{" "}
-          <Link href="/guides/platform-influencer-iran" className="text-purple hover:underline">
-            پلتفرم اینفلوئنسر ایران
           </Link>
         </p>
 
@@ -49,6 +56,18 @@ export function SeoTopics() {
             </Link>
           ))}
           <Link
+            href="/blog/hazine-tabligat-instagram-bar-asas-follower"
+            className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
+          >
+            هزینه بر اساس فالوور
+          </Link>
+          <Link
+            href="/blog/tarefe-post-story-reels-instagram-1405"
+            className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
+          >
+            تعرفه پست و ریلز
+          </Link>
+          <Link
             href="/blog/tabligat-instagram-foroshgah"
             className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
           >
@@ -59,12 +78,6 @@ export function SeoTopics() {
             className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
           >
             تبلیغات ریلز
-          </Link>
-          <Link
-            href="/blog/10-eshtebah-tabligat-instagram"
-            className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
-          >
-            اشتباهات رایج
           </Link>
         </nav>
       </div>

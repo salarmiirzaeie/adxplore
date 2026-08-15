@@ -14,6 +14,7 @@ import {
   JsonLd,
   articleJsonLd,
   breadcrumbJsonLd,
+  faqJsonLd,
 } from "@/lib/seo/json-ld";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -47,6 +48,9 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
       <JsonLd data={articleJsonLd(post)} />
+      {post.faqs && post.faqs.length > 0 ? (
+        <JsonLd data={faqJsonLd(post.faqs)} />
+      ) : null}
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "خانه", path: "/" },

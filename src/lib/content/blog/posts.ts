@@ -1,4 +1,5 @@
 import type { BlogPost } from "@/lib/content/types";
+import { gscArticles } from "@/lib/content/blog/gsc-articles";
 
 export const blogPosts: BlogPost[] = [
   {
@@ -217,18 +218,20 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "gheymat-tabligat-instagram-iran",
-    title: "قیمت و تعرفه تبلیغات اینستاگرام در ایران — راهنمای ۱۴۰۵",
+    title: "قیمت تبلیغات اینستاگرام در ایران ۱۴۰۵ — تعرفه بلاگر",
     description:
-      "برآورد قیمت تبلیغات اینستاگرام و تعرفه بلاگر در ایران بر اساس فالوور، نرخ تعامل، نوع محتوا و نیچ؛ راهنمای عملی بودجه‌بندی در ۱۴۰۵.",
+      "قیمت و تعرفه تبلیغات اینستاگرام در ایران ۱۴۰۵: بازه هزینه بر اساس فالوور، تفاوت پست و استوری و ریلز، و راهنمای بودجه‌بندی قبل از همکاری با بلاگر.",
     keywords: [
       "قیمت تبلیغات اینستاگرام",
       "تعرفه بلاگر",
       "هزینه رپورتاژ اینستاگرام",
       "قیمت تبلیغات اینستاگرام ۱۴۰۵",
+      "هزینه تبلیغات اینستاگرام",
+      "تعرفه تبلیغات اینستاگرام ۱۴۰۵",
     ],
     category: "راهنما",
     publishedAt: "2025-06-08",
-    updatedAt: "2026-07-31",
+    updatedAt: "2026-08-15",
     readingTime: 12,
     sections: [
       {
@@ -271,6 +274,7 @@ export const blogPosts: BlogPost[] = [
         ],
         links: [
           { href: "/guides/gheymat-tabligat-instagram", label: "راهنمای قیمت در بخش راهنماها" },
+          { href: "/blog/hazine-tabligat-instagram-bar-asas-follower", label: "جدول هزینه بر اساس فالوور" },
           { href: "/blog/engagement-rate-blogger", label: "محاسبه نرخ تعامل" },
         ],
       },
@@ -1155,6 +1159,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  ...gscArticles,
 ];
 
 export function getBlogPost(slug: string) {

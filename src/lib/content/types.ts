@@ -5,6 +5,11 @@ export type ContentSection = {
   links?: { href: string; label: string }[];
 };
 
+export type BlogFaq = {
+  question: string;
+  answer: string;
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
@@ -15,6 +20,7 @@ export type BlogPost = {
   updatedAt: string;
   readingTime: number;
   sections: ContentSection[];
+  faqs?: BlogFaq[];
 };
 
 export type GuidePage = {

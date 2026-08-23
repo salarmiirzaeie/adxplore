@@ -17,7 +17,7 @@ export const gscArticles: BlogPost[] = [
     ],
     category: "راهنما",
     publishedAt: "2026-08-09",
-    updatedAt: "2026-08-15",
+    updatedAt: "2026-08-23",
     readingTime: 16,
     faqs: [
       {
@@ -392,7 +392,10 @@ export const gscArticles: BlogPost[] = [
           "نزدیک مناسبت‌ها تعرفه بالا می‌رود. بخشی از بودجه را برای ایام عادی نگه دارید تا همیشه در حال یادگیری بمانید و فقط در پیک گران نخرید.",
         ],
         links: [
-          { href: "/blog/hazine-tabligat-instagram-bar-asas-follower", label: "هزینه بر اساس فالوور" },
+          {
+            href: "/blog/hazine-tabligat-instagram-bar-asas-follower",
+            label: "هزینه تبلیغات در اینستاگرام بر اساس فالوور",
+          },
           { href: "/guides/gheymat-tabligat-instagram", label: "راهنمای قیمت" },
         ],
       },

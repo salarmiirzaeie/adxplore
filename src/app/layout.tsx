@@ -69,9 +69,13 @@ export const metadata: Metadata = {
   category: "technology",
   applicationName: siteConfig.nameEn,
   icons: {
-    icon: [{ url: "/icon", type: "image/png", sizes: "32x32" }],
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon-96.png", type: "image/png", sizes: "96x96" },
+      { url: "/icon", type: "image/png", sizes: "32x32" },
+    ],
     apple: [{ url: "/apple-icon", type: "image/png", sizes: "180x180" }],
-    shortcut: "/icon",
+    shortcut: "/favicon.ico",
   },
   formatDetection: {
     telephone: true,

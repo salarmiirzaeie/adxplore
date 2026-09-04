@@ -1,3 +1,5 @@
+import { PanelLink } from "@/components/landing/panel-link";
+
 const steps = [
   {
     step: "۱",
@@ -65,6 +67,10 @@ export function HowItWorks() {
             </li>
           ))}
         </ol>
+
+        <div className="mt-12 flex justify-center">
+          <PanelLink>ورود به پنل و شروع همکاری</PanelLink>
+        </div>
       </div>
     </section>
   );

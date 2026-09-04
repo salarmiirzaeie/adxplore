@@ -67,7 +67,16 @@ export default function AboutPage() {
               </a>
             </p>
             <p className="mt-2">
-              <Link href="/guides" className="btn-primary mt-4 inline-block rounded-xl px-5 py-2.5 text-sm font-bold">
+              <a
+                href={siteConfig.links.app}
+                rel="noopener noreferrer"
+                className="btn-primary mt-4 inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-bold"
+              >
+                ورود به پنل
+              </a>
+            </p>
+            <p className="mt-4">
+              <Link href="/guides" className="font-semibold text-purple hover:underline">
                 مشاهده راهنماها
               </Link>
             </p>

@@ -19,14 +19,18 @@ export default function NotFound() {
           صفحه‌ای که دنبال آن بودید وجود ندارد یا منتقل شده است.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Link href="/" className="btn-primary rounded-xl px-5 py-2.5 text-sm font-bold">
+          <a
+            href={siteConfig.links.app}
+            rel="noopener noreferrer"
+            className="btn-primary rounded-xl px-5 py-2.5 text-sm font-bold"
+          >
+            ورود به پنل
+          </a>
+          <Link href="/" className="btn-navy rounded-xl px-5 py-2.5 text-sm font-bold">
             بازگشت به خانه
           </Link>
-          <Link href="/blog" className="btn-navy rounded-xl px-5 py-2.5 text-sm font-bold">
+          <Link href="/blog" className="rounded-xl border border-border px-5 py-2.5 text-sm font-bold text-navy">
             مجله
-          </Link>
-          <Link href="/guides" className="rounded-xl border border-border px-5 py-2.5 text-sm font-bold text-navy">
-            راهنماها
           </Link>
         </div>
         <p className="mt-8 text-xs text-muted">{siteConfig.name} — adxplore.ir</p>

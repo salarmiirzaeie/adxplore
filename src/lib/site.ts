@@ -61,6 +61,7 @@ export const siteConfig = {
   links: {
     instagram: "https://instagram.com/adxplore.ir",
     telegram: "https://t.me/adxplore.ir",
+    app: process.env.NEXT_PUBLIC_APP_URL ?? "https://app.adxplore.ir",
   },
   contact: {
     email: "hello@adxplore.ir",

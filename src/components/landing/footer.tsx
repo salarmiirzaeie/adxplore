@@ -26,6 +26,7 @@ export function Footer() {
             <p className="font-bold text-white">دسترسی سریع</p>
             <ul className="mt-4 space-y-2 text-sm">
               {[
+                { href: siteConfig.links.app, label: "ورود به پنل", external: true },
                 { href: "/#how-it-works", label: "نحوه کار" },
                 { href: "/guides", label: "راهنماها" },
                 { href: "/blog", label: "مجله" },
@@ -33,9 +34,19 @@ export function Footer() {
                 { href: `tel:${siteConfig.contact.phone}`, label: "تماس" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="transition hover:text-purple-muted">
-                    {link.label}
-                  </Link>
+                  {"external" in link && link.external ? (
+                    <a
+                      href={link.href}
+                      rel="noopener noreferrer"
+                      className="transition hover:text-purple-muted"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link href={link.href} className="transition hover:text-purple-muted">
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -103,7 +114,16 @@ export function Footer() {
             </ul>
           </div>
           <div className="text-sm">
-            <p className="font-bold text-white">فید RSS</p>
+            <p className="font-bold text-white">پنل محصول</p>
+            <a
+              href={siteConfig.links.app}
+              rel="noopener noreferrer"
+              className="mt-3 inline-block transition hover:text-purple-muted"
+              dir="ltr"
+            >
+              app.adxplore.ir
+            </a>
+            <p className="mt-6 font-bold text-white">فید RSS</p>
             <Link href="/feed.xml" className="mt-3 inline-block transition hover:text-purple-muted">
               /feed.xml
             </Link>
@@ -126,6 +146,14 @@ export function Footer() {
             <Link href="/terms" className="transition hover:text-white">
               قوانین
             </Link>
+            <span aria-hidden>·</span>
+            <a
+              href={siteConfig.links.app}
+              rel="noopener noreferrer"
+              className="transition hover:text-white"
+            >
+              ورود به پنل
+            </a>
             <span aria-hidden>·</span>
             <Link href="/" className="transition hover:text-white">
               adxplore.ir

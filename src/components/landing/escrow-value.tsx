@@ -1,3 +1,5 @@
+import { PanelLink } from "@/components/landing/panel-link";
+
 const valuePoints = [
   {
     title: "پرداخت امن (اسکرو)",
@@ -59,6 +61,10 @@ export function EscrowValue() {
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div className="mt-8">
+              <PanelLink>ورود به پنل</PanelLink>
             </div>
           </div>
 

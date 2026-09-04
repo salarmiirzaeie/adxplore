@@ -1,5 +1,6 @@
 import { siteConfig } from "@/lib/site";
 import { HeroPhoneMock } from "@/components/landing/hero-phone-mock";
+import { PanelLink } from "@/components/landing/panel-link";
 
 export function Hero() {
   return (
@@ -40,6 +41,16 @@ export function Hero() {
           <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-slate-300/90 sm:text-base sm:leading-8 lg:mx-0 lg:text-lg">
             {siteConfig.description}
           </p>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+            <PanelLink>ورود به پنل</PanelLink>
+            <a
+              href="#how-it-works"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-bold text-white transition hover:border-white/40 hover:bg-white/10"
+            >
+              نحوه کار
+            </a>
+          </div>
 
           <ul className="mt-8 flex flex-wrap justify-center gap-2.5 sm:gap-3 lg:justify-start">
             {[

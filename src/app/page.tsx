@@ -4,6 +4,7 @@ import { Header } from "@/components/landing/header";
 import { Hero } from "@/components/landing/hero";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { EscrowValue } from "@/components/landing/escrow-value";
+import { PanelCta } from "@/components/landing/panel-cta";
 import { BlogPreview } from "@/components/landing/blog-preview";
 import { SeoTopics } from "@/components/landing/seo-topics";
 import { Faq } from "@/components/landing/faq";
@@ -42,6 +43,7 @@ export default function HomePage() {
         <Hero />
         <HowItWorks />
         <EscrowValue />
+        <PanelCta />
         <BlogPreview posts={blogPosts} />
         <Faq />
         <SeoTopics />

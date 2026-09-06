@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "@/components/brand/logo";
+import { EnamadSeal } from "@/components/landing/enamad-seal";
 import { siteConfig } from "@/lib/site";
 import { guidePages } from "@/lib/content/guides";
 
@@ -130,35 +131,40 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-3 text-xs sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} {siteConfig.name} ({siteConfig.nameEn}). تمامی حقوق محفوظ است.
-          </p>
-          <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <Link href="/about" className="transition hover:text-white">
-              درباره ما
-            </Link>
-            <span aria-hidden>·</span>
-            <Link href="/privacy" className="transition hover:text-white">
-              حریم خصوصی
-            </Link>
-            <span aria-hidden>·</span>
-            <Link href="/terms" className="transition hover:text-white">
-              قوانین
-            </Link>
-            <span aria-hidden>·</span>
-            <a
-              href={siteConfig.links.app}
-              rel="noopener noreferrer"
-              className="transition hover:text-white"
-            >
-              ورود به پنل
-            </a>
-            <span aria-hidden>·</span>
-            <Link href="/" className="transition hover:text-white">
-              adxplore.ir
-            </Link>
-          </p>
+        <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-3 text-xs">
+            <p>
+              © {year} {siteConfig.name} ({siteConfig.nameEn}). تمامی حقوق محفوظ است.
+            </p>
+            <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <Link href="/about" className="transition hover:text-white">
+                درباره ما
+              </Link>
+              <span aria-hidden>·</span>
+              <Link href="/privacy" className="transition hover:text-white">
+                حریم خصوصی
+              </Link>
+              <span aria-hidden>·</span>
+              <Link href="/terms" className="transition hover:text-white">
+                قوانین
+              </Link>
+              <span aria-hidden>·</span>
+              <a
+                href={siteConfig.links.app}
+                rel="noopener noreferrer"
+                className="transition hover:text-white"
+              >
+                ورود به پنل
+              </a>
+              <span aria-hidden>·</span>
+              <Link href="/" className="transition hover:text-white">
+                adxplore.ir
+              </Link>
+            </p>
+          </div>
+          <div className="rounded-xl bg-white p-1.5 shadow-sm">
+            <EnamadSeal />
+          </div>
         </div>
       </div>
     </footer>

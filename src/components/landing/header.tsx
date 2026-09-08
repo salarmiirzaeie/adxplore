@@ -17,22 +17,15 @@ export function Header() {
           <Logo />
         </Link>
 
-        <nav
-          aria-label="ناوبری اصلی"
-          className="hidden items-center gap-6 text-sm font-medium text-muted lg:flex"
-        >
+        <nav aria-label="ناوبری اصلی" className="hidden items-center gap-6 text-sm font-medium text-muted lg:flex">
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="transition-colors hover:text-purple"
-            >
+            <Link key={link.href} href={link.href} className="transition-colors hover:text-purple">
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <PanelLink className="px-3.5 py-2 sm:px-4 sm:py-2.5">ورود به پنل</PanelLink>
+        <PanelLink className="px-3.5 py-2 sm:px-4 sm:py-2.5">ورود / ثبت نام</PanelLink>
       </div>
     </header>
   );

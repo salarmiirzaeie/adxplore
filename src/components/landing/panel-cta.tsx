@@ -29,10 +29,7 @@ export function PanelCta() {
             <div className="relative grid items-center gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
               <div>
                 <p className="label-brand text-purple-muted">پنل ادکسپلور</p>
-                <h2
-                  id="panel-cta-heading"
-                  className="mt-3 text-3xl font-extrabold text-white sm:text-4xl"
-                >
+                <h2 id="panel-cta-heading" className="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
                   همین حالا وارد پنل شوید
                 </h2>
                 <p className="mt-4 max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
@@ -43,7 +40,7 @@ export function PanelCta() {
                   فعال است. ورود با شماره موبایل، رایگان.
                 </p>
                 <div className="mt-8">
-                  <PanelLink>ورود به پنل</PanelLink>
+                  <PanelLink>ورود / ثبت نام</PanelLink>
                 </div>
               </div>
 
@@ -56,9 +53,7 @@ export function PanelCta() {
                       className="card-dark block rounded-2xl p-5 transition hover:border-purple/40"
                     >
                       <p className="font-bold text-white">{item.title}</p>
-                      <p className="mt-2 text-sm leading-7 text-slate-400">
-                        {item.description}
-                      </p>
+                      <p className="mt-2 text-sm leading-7 text-slate-400">{item.description}</p>
                     </a>
                   </li>
                 ))}

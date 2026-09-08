@@ -4,26 +4,22 @@ const steps = [
   {
     step: "۱",
     title: "ساخت کمپین",
-    description:
-      "هدف، بودجه، زمان‌بندی و بریف کمپین را تعریف کنید. همه‌چیز در یک داشبورد شفاف و آماده اجرا.",
+    description: "هدف، بودجه، زمان‌بندی و بریف کمپین را تعریف کنید. همه‌چیز در یک داشبورد شفاف و آماده اجرا.",
   },
   {
     step: "۲",
     title: "اینوایت اینفلوئنسرها",
-    description:
-      "بلاگرهای مناسب را از دایرکتوری پیدا کنید و مستقیماً به کمپین دعوت کنید — بدون واسطه آژانس.",
+    description: "بلاگرهای مناسب را از دایرکتوری پیدا کنید و مستقیماً به کمپین دعوت کنید — بدون واسطه آژانس.",
   },
   {
     step: "۳",
     title: "چت و مذاکره",
-    description:
-      "با بلاگر گفتگو کنید، سناریو را نهایی کنید و شرایط همکاری را مستقیم و شفاف توافق کنید.",
+    description: "با بلاگر گفتگو کنید، سناریو را نهایی کنید و شرایط همکاری را مستقیم و شفاف توافق کنید.",
   },
   {
     step: "۴",
     title: "پرداخت امن و آزادسازی",
-    description:
-      "وجه در حساب امانی (Escrow) نگه داشته می‌شود و پس از انتشار و تایید شما، به بلاگر آزاد می‌شود.",
+    description: "وجه در حساب امانی (Escrow) نگه داشته می‌شود و پس از انتشار و تایید شما، به بلاگر آزاد می‌شود.",
   },
 ] as const;
 
@@ -37,10 +33,7 @@ export function HowItWorks() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="label-brand">فرایند همکاری</p>
-          <h2
-            id="how-heading"
-            className="mt-3 text-3xl font-extrabold text-navy sm:text-4xl"
-          >
+          <h2 id="how-heading" className="mt-3 text-3xl font-extrabold text-navy sm:text-4xl">
             چگونه کار می‌کند؟
           </h2>
           <p className="mt-4 text-lg text-muted">
@@ -69,7 +62,7 @@ export function HowItWorks() {
         </ol>
 
         <div className="mt-12 flex justify-center">
-          <PanelLink>ورود به پنل و شروع همکاری</PanelLink>
+          <PanelLink>ورود / ثبت نام و شروع همکاری</PanelLink>
         </div>
       </div>
     </section>

@@ -18,16 +18,14 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2">
             <Logo showEnglish theme="light" />
-            <p className="mt-5 max-w-md text-sm leading-7 text-slate-400">
-              {siteConfig.description}
-            </p>
+            <p className="mt-5 max-w-md text-sm leading-7 text-slate-400">{siteConfig.description}</p>
           </div>
 
           <div>
             <p className="font-bold text-white">دسترسی سریع</p>
             <ul className="mt-4 space-y-2 text-sm">
               {[
-                { href: siteConfig.links.app, label: "ورود به پنل", external: true },
+                { href: siteConfig.links.app, label: "ورود / ثبت نام", external: true },
                 { href: "/#how-it-works", label: "نحوه کار" },
                 { href: "/guides", label: "راهنماها" },
                 { href: "/blog", label: "مجله" },
@@ -36,11 +34,7 @@ export function Footer() {
               ].map((link) => (
                 <li key={link.href}>
                   {"external" in link && link.external ? (
-                    <a
-                      href={link.href}
-                      rel="noopener noreferrer"
-                      className="transition hover:text-purple-muted"
-                    >
+                    <a href={link.href} rel="noopener noreferrer" className="transition hover:text-purple-muted">
                       {link.label}
                     </a>
                   ) : (
@@ -58,10 +52,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {guidePages.map((guide) => (
                 <li key={guide.slug}>
-                  <Link
-                    href={`/guides/${guide.slug}`}
-                    className="transition hover:text-purple-muted"
-                  >
+                  <Link href={`/guides/${guide.slug}`} className="transition hover:text-purple-muted">
                     {guide.title.split("—")[0].trim()}
                   </Link>
                 </li>
@@ -75,20 +66,12 @@ export function Footer() {
             <p className="font-bold text-white">ارتباط با ما</p>
             <ul className="mt-3 space-y-2 text-sm">
               <li>
-                <a
-                  href={`tel:${siteConfig.contact.phone}`}
-                  className="transition hover:text-purple-muted"
-                  dir="ltr"
-                >
+                <a href={`tel:${siteConfig.contact.phone}`} className="transition hover:text-purple-muted" dir="ltr">
                   {siteConfig.contact.phoneDisplay}
                 </a>
               </li>
               <li>
-                <a
-                  href={`mailto:${siteConfig.contact.email}`}
-                  className="transition hover:text-purple-muted"
-                  dir="ltr"
-                >
+                <a href={`mailto:${siteConfig.contact.email}`} className="transition hover:text-purple-muted" dir="ltr">
                   {siteConfig.contact.email}
                 </a>
               </li>
@@ -149,12 +132,8 @@ export function Footer() {
                 قوانین
               </Link>
               <span aria-hidden>·</span>
-              <a
-                href={siteConfig.links.app}
-                rel="noopener noreferrer"
-                className="transition hover:text-white"
-              >
-                ورود به پنل
+              <a href={siteConfig.links.app} rel="noopener noreferrer" className="transition hover:text-white">
+                ورود / ثبت نام
               </a>
               <span aria-hidden>·</span>
               <Link href="/" className="transition hover:text-white">

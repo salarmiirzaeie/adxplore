@@ -42,9 +42,8 @@ export default function AboutPage() {
           <section>
             <h2 className="text-xl font-bold text-navy">ماموریت ما</h2>
             <p className="mt-3">
-              ادکسپلور با هدف حذف واسطه‌های پرهزینه در تبلیغات اینستاگرام ساخته شده است. ما به برندهای
-              ایرانی کمک می‌کنیم مستقیماً با بلاگرهای مناسب همکاری کنند، کمپین را مدیریت کنند و با
-              پرداخت امن اجرا کنند.
+              ادکسپلور با هدف حذف واسطه‌های پرهزینه در تبلیغات اینستاگرام ساخته شده است. ما به برندهای ایرانی کمک
+              می‌کنیم مستقیماً با بلاگرهای مناسب همکاری کنند، کمپین را مدیریت کنند و با پرداخت امن اجرا کنند.
             </p>
           </section>
 
@@ -72,7 +71,7 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 className="btn-primary mt-4 inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-bold"
               >
-                ورود به پنل
+                ورود / ثبت نام
               </a>
             </p>
             <p className="mt-4">

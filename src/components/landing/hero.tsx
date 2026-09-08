@@ -20,11 +20,8 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-6xl items-center gap-8 md:gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-8 xl:gap-10">
         <div className="text-center lg:text-right">
           <p className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-purple-soft backdrop-blur-sm">
-            <span
-              className="h-1.5 w-1.5 rounded-full bg-purple shadow-[0_0_8px_#7C3AED]"
-              aria-hidden
-            />
-            پلتفرم DIY تبلیغات اینستاگرام · بدون واسطه
+            <span className="h-1.5 w-1.5 rounded-full bg-purple shadow-[0_0_8px_#7C3AED]" aria-hidden />
+            پنل برند و بلاگر · پرداخت امن (اسکرو)
           </p>
 
           <h1
@@ -43,7 +40,7 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-            <PanelLink>ورود به پنل</PanelLink>
+            <PanelLink>شروع رایگان در پنل</PanelLink>
             <a
               href="#how-it-works"
               className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-bold text-white transition hover:border-white/40 hover:bg-white/10"
@@ -54,14 +51,12 @@ export function Hero() {
 
           <ul className="mt-8 flex flex-wrap justify-center gap-2.5 sm:gap-3 lg:justify-start">
             {[
+              { label: "برای", value: "برند و بلاگر" },
+              { label: "پرداخت", value: "اسکرو امن" },
               { label: "کارمزد آژانس", value: "۰٪" },
-              { label: "پرداخت", value: "امن (اسکرو)" },
-              { label: "تمرکز", value: "اینستاگرام" },
             ].map((item) => (
               <li key={item.label} className="card-dark rounded-xl px-3.5 py-2.5 sm:px-4 sm:py-3">
-                <span className="block text-[10px] font-medium text-slate-400 sm:text-[11px]">
-                  {item.label}
-                </span>
+                <span className="block text-[10px] font-medium text-slate-400 sm:text-[11px]">{item.label}</span>
                 <span className="text-sm font-bold text-white">{item.value}</span>
               </li>
             ))}

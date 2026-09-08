@@ -11,17 +11,11 @@ type Props = {
 const variantClass: Record<Variant, string> = {
   primary: "btn-primary text-white",
   navy: "btn-navy text-white",
-  ghost:
-    "border border-white/20 bg-white/5 text-white transition hover:border-white/40 hover:bg-white/10",
-  outline:
-    "border border-border bg-white text-navy transition hover:border-purple/40 hover:text-purple",
+  ghost: "border border-white/20 bg-white/5 text-white transition hover:border-white/40 hover:bg-white/10",
+  outline: "border border-border bg-white text-navy transition hover:border-purple/40 hover:text-purple",
 };
 
-export function PanelLink({
-  className = "",
-  children = "ورود به پنل",
-  variant = "primary",
-}: Props) {
+export function PanelLink({ className = "", children = "ورود / ثبت نام", variant = "primary" }: Props) {
   return (
     <a
       href={siteConfig.links.app}
@@ -44,13 +38,7 @@ function ExternalArrow() {
       aria-hidden
       className="hidden shrink-0 opacity-80 sm:block"
     >
-      <path
-        d="M7 17 17 7M9 7h8v8"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <path d="M7 17 17 7M9 7h8v8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }

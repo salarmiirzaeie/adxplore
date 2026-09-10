@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { useId } from "react";
 import { siteConfig } from "@/lib/site";
 
@@ -8,9 +9,17 @@ type LogoProps = {
   showEnglish?: boolean;
 };
 
-function LogoMark({ className }: { className?: string }) {
+type LogoMarkProps = {
+  className?: string;
+  style?: CSSProperties;
+  /** Solid fill — required for html-to-image (SVG gradient ids break on clone). */
+  solid?: boolean;
+};
+
+export function LogoMark({ className, style, solid = false }: LogoMarkProps) {
   const uid = useId().replace(/:/g, "");
   const gradId = `ig-adx-${uid}`;
+  const fill = solid ? "#7C3AED" : `url(#${gradId})`;
 
   return (
     <svg
@@ -18,25 +27,26 @@ function LogoMark({ className }: { className?: string }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      style={style}
       role="img"
       aria-label={siteConfig.nameEn}
     >
-      <defs>
-        <linearGradient id={gradId} x1="2" y1="30" x2="30" y2="2">
-          <stop offset="0%" stopColor="#5B21B6" />
-          <stop offset="50%" stopColor="#7C3AED" />
-          <stop offset="100%" stopColor="#8B5CF6" />
-        </linearGradient>
-      </defs>
+      {!solid && (
+        <defs>
+          <linearGradient id={gradId} x1="2" y1="30" x2="30" y2="2">
+            <stop offset="0%" stopColor="#5B21B6" />
+            <stop offset="50%" stopColor="#7C3AED" />
+            <stop offset="100%" stopColor="#8B5CF6" />
+          </linearGradient>
+        </defs>
+      )}
 
-      <rect width="32" height="32" rx="8" fill={`url(#${gradId})`} />
+      <rect width="32" height="32" rx="8" fill={fill} />
 
-      {/* Instagram-style camera — thin white lines, our purple gradient */}
       <rect x="6" y="6" width="20" height="20" rx="5.5" stroke="white" strokeWidth="1.75" fill="none" />
 
       <circle cx="16" cy="16" r="5.5" stroke="white" strokeWidth="1.75" fill="none" />
 
-      {/* Our chevron shape inside the lens */}
       <path
         d="M13.5 18L16 14.5M18.5 18L16 14.5"
         stroke="white"
@@ -45,7 +55,6 @@ function LogoMark({ className }: { className?: string }) {
         strokeLinejoin="round"
       />
 
-      {/* Viewfinder dot — IG position: top edge, right of lens */}
       <circle cx="22" cy="9.5" r="1.3" fill="white" />
     </svg>
   );

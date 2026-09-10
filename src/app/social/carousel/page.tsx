@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function CarouselIndexPage() {
   return (
-    <main className="mx-auto max-w-2xl px-4 py-12 font-[family-name:var(--font-vazirmatn)]">
+    <main className="mx-auto max-w-5xl px-4 py-12 font-[family-name:var(--font-vazirmatn)]">
       <h1 className="text-2xl font-bold text-navy">اسلایدهای کاروسل اینستاگرام</h1>
       <p className="mt-3 text-muted">
         روی «دانلود PNG» بزنید — فایل ۱۰۸۰×۱۰۸۰ با فونت وزیرمتن و متن فارسی درست آماده

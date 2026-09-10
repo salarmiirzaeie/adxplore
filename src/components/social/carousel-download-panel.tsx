@@ -1,7 +1,7 @@
 "use client";
 
 import { toPng } from "html-to-image";
-import { useCallback, useState } from "react";
+import { useCallback, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { CarouselSlideFrame } from "@/components/social/carousel-slide-frame";
 import type { CarouselSet } from "@/lib/social/carousel-slides";
 
@@ -13,6 +13,39 @@ function slideId(slug: string, index: number) {
   return `carousel-slide-${slug}-${index + 1}`;
 }
 
+function ScaledSlidePreview({ children }: { children: ReactNode }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(0.4);
+
+  useLayoutEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const update = () => setScale(el.clientWidth / 1080);
+    update();
+
+    const observer = new ResizeObserver(update);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className="relative aspect-square w-full overflow-hidden bg-navy" dir="ltr">
+      <div
+        className="pointer-events-none absolute left-0 top-0 origin-top-left"
+        aria-hidden
+        style={{
+          width: 1080,
+          height: 1080,
+          transform: `scale(${scale})`,
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
 export function CarouselDownloadPanel({ sets }: Props) {
   const [busy, setBusy] = useState<string | null>(null);
 
@@ -20,10 +53,14 @@ export function CarouselDownloadPanel({ sets }: Props) {
     const node = document.getElementById(slideId(slug, index));
     if (!node) return;
 
+    if (document.fonts?.ready) {
+      await document.fonts.ready;
+    }
+
     const dataUrl = await toPng(node, {
       width: 1080,
       height: 1080,
-      pixelRatio: 1,
+      pixelRatio: 2,
       cacheBust: true,
     });
     const link = document.createElement("a");
@@ -75,17 +112,12 @@ export function CarouselDownloadPanel({ sets }: Props) {
             </button>
           </div>
 
-          <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {set.slides.map((slide, i) => (
-              <figure key={slide.heading} className="overflow-hidden rounded-xl border border-border">
-                <div className="relative aspect-square w-full overflow-hidden bg-surface">
-                  <div
-                    className="pointer-events-none absolute left-0 top-0 origin-top-left scale-[0.5]"
-                    aria-hidden
-                  >
-                    <CarouselSlideFrame slide={slide} index={i} total={set.slides.length} />
-                  </div>
-                </div>
+              <figure key={slide.heading} className="overflow-hidden rounded-2xl border border-border shadow-sm">
+                <ScaledSlidePreview>
+                  <CarouselSlideFrame slide={slide} index={i} total={set.slides.length} />
+                </ScaledSlidePreview>
                 <figcaption className="flex items-center justify-between gap-2 px-2 py-2">
                   <span className="text-xs text-muted">اسلاید {i + 1}</span>
                   <button

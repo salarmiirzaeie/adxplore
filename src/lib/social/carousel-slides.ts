@@ -29,7 +29,7 @@ export const carouselSets: CarouselSet[] = [
         sub: "همکاری مستقیم با برند · بدون واسطه سنگین",
       },
       {
-        heading: "به‌زودی 🚀",
+        heading: "شروع رایگان",
         sub: "adxplore.ir",
       },
     ],

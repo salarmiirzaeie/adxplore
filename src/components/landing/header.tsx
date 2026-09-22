@@ -4,6 +4,7 @@ import { PanelLink } from "@/components/landing/panel-link";
 
 const navLinks = [
   { href: "/#how-it-works", label: "نحوه کار" },
+  { href: "/#download", label: "دانلود اپ" },
   { href: "/guides", label: "راهنماها" },
   { href: "/blog", label: "مجله" },
   { href: "/#faq", label: "سوالات" },

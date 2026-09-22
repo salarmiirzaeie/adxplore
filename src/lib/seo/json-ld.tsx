@@ -62,6 +62,31 @@ export function webApplicationJsonLd() {
   };
 }
 
+export function mobileApplicationJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    name: `${siteConfig.name} | پلتفرم تبلیغات اینستاگرام`,
+    alternateName: siteConfig.nameEn,
+    operatingSystem: "Android",
+    applicationCategory: "BusinessApplication",
+    softwareVersion: siteConfig.android.version,
+    fileSize: "2MB",
+    inLanguage: "fa-IR",
+    description:
+      "اپلیکیشن اندروید ادکسپلور برای همکاری مستقیم برند و بلاگر: کشف اینفلوئنسر، دعوت به کمپین، چت و پرداخت امن.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "IRR",
+    },
+    installUrl: [siteConfig.links.bazaar, siteConfig.links.myket],
+    downloadUrl: siteConfig.links.bazaar,
+    url: `${siteConfig.url}/#download`,
+    author: { "@type": "Organization", name: siteConfig.name, url: siteConfig.url },
+  };
+}
+
 export function faqJsonLd(
   items: ReadonlyArray<{ question: string; answer: string }>,
 ) {

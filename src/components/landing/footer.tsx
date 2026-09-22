@@ -26,6 +26,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {[
                 { href: siteConfig.links.app, label: "ورود / ثبت نام", external: true },
+                { href: "/#download", label: "دانلود اپ اندروید" },
                 { href: "/#how-it-works", label: "نحوه کار" },
                 { href: "/guides", label: "راهنماها" },
                 { href: "/blog", label: "مجله" },
@@ -101,6 +102,29 @@ export function Footer() {
             >
               app.adxplore.ir
             </a>
+            <p className="mt-6 font-bold text-white">اپلیکیشن اندروید</p>
+            <ul className="mt-3 space-y-2">
+              <li>
+                <a
+                  href={siteConfig.links.bazaar}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="transition hover:text-purple-muted"
+                >
+                  کافه‌بازار
+                </a>
+              </li>
+              <li>
+                <a
+                  href={siteConfig.links.myket}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="transition hover:text-purple-muted"
+                >
+                  مایکت
+                </a>
+              </li>
+            </ul>
             <p className="mt-6 font-bold text-white">فید RSS</p>
             <Link href="/feed.xml" className="mt-3 inline-block transition hover:text-purple-muted">
               /feed.xml

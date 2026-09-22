@@ -4,6 +4,7 @@ import { Header } from "@/components/landing/header";
 import { Hero } from "@/components/landing/hero";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { EscrowValue } from "@/components/landing/escrow-value";
+import { AppDownload } from "@/components/landing/app-download";
 import { PanelCta } from "@/components/landing/panel-cta";
 import { BlogPreview } from "@/components/landing/blog-preview";
 import { SeoTopics } from "@/components/landing/seo-topics";
@@ -14,6 +15,7 @@ import {
   JsonLd,
   faqJsonLd,
   organizationJsonLd,
+  mobileApplicationJsonLd,
   webApplicationJsonLd,
   webSiteJsonLd,
 } from "@/lib/seo/json-ld";
@@ -37,6 +39,7 @@ export default function HomePage() {
       <JsonLd data={organizationJsonLd()} />
       <JsonLd data={webSiteJsonLd()} />
       <JsonLd data={webApplicationJsonLd()} />
+      <JsonLd data={mobileApplicationJsonLd()} />
       <JsonLd data={faqJsonLd(faqItems)} />
 
       <Header />
@@ -44,6 +47,7 @@ export default function HomePage() {
         <Hero />
         <HowItWorks />
         <EscrowValue />
+        <AppDownload />
         <PanelCta />
         <BlogPreview posts={blogPosts} />
         <Faq />

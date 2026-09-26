@@ -3,23 +3,30 @@ import { PanelLink } from "@/components/landing/panel-link";
 const steps = [
   {
     step: "۱",
+    side: "کار برند",
     title: "ساخت کمپین",
-    description: "هدف، بودجه، زمان‌بندی و بریف کمپین را تعریف کنید. همه‌چیز در یک داشبورد شفاف و آماده اجرا.",
+    description:
+      "برند هدف، بودجه، زمان‌بندی و بریف را مشخص می‌کند. اینفلوئنسرهای مرتبط همان کمپین را در پنل می‌بینند.",
   },
   {
     step: "۲",
-    title: "دعوت اینفلوئنسرها",
-    description: "بلاگرهای مناسب را از دایرکتوری پیدا کنید و مستقیماً به کمپین دعوت کنید — بدون واسطه آژانس.",
+    side: "دعوت یا پیشنهاد",
+    title: "شروع همکاری",
+    description:
+      "برند می‌تواند بلاگر را دعوت کند. اینفلوئنسر هم می‌تواند خودش پیشنهاد همکاری بفرستد. واسطه‌ای در کار نیست.",
   },
   {
     step: "۳",
-    title: "چت و مذاکره",
-    description: "با بلاگر گفتگو کنید، سناریو را نهایی کنید و شرایط همکاری را مستقیم و شفاف توافق کنید.",
+    side: "گفتگوی دو طرف",
+    title: "توافق روی جزئیات",
+    description: "نوع محتوا، زمان انتشار و مبلغ، در گفتگوی همان کمپین قطعی می‌شود.",
   },
   {
     step: "۴",
-    title: "پرداخت امن و آزادسازی",
-    description: "وجه در حساب امانی (Escrow) نگه داشته می‌شود و پس از انتشار و تایید شما، به بلاگر آزاد می‌شود.",
+    side: "پرداخت امن",
+    title: "انتشار و واریز درآمد",
+    description:
+      "اینفلوئنسر محتوا را منتشر می‌کند، برند آن را تأیید می‌کند و مبلغ از حساب امانی به کیف پول اینفلوئنسر واریز می‌شود.",
   },
 ] as const;
 
@@ -32,12 +39,12 @@ export function HowItWorks() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="label-brand">فرایند همکاری</p>
+          <p className="label-brand">نحوه همکاری</p>
           <h2 id="how-heading" className="mt-3 text-3xl font-extrabold text-navy sm:text-4xl">
-            چگونه کار می‌کند؟
+            از ساخت کمپین تا دریافت پول
           </h2>
-          <p className="mt-4 text-lg text-muted">
-            چهار قدم ساده از ساخت کمپین تا پرداخت امن — مستقیم، شفاف و بدون واسطه.
+          <p className="mt-4 text-lg leading-8 text-muted">
+            برند کمپین را می‌سازد و اینفلوئنسر آن را انجام می‌دهد. مبلغ تا زمان انتشار و تأیید، پیش ادکسپلور می‌ماند.
           </p>
         </div>
 
@@ -55,7 +62,8 @@ export function HowItWorks() {
               >
                 {item.step}
               </span>
-              <h3 className="mt-5 text-xl font-bold text-navy">{item.title}</h3>
+              <p className="mt-5 text-[11px] font-bold text-purple">{item.side}</p>
+              <h3 className="mt-1 text-xl font-bold text-navy">{item.title}</h3>
               <p className="mt-3 text-sm leading-7 text-muted">{item.description}</p>
             </li>
           ))}

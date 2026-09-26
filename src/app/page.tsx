@@ -2,10 +2,10 @@ import { buildPageMetadata } from "@/lib/seo/metadata";
 import { blogPosts } from "@/lib/content/blog/posts";
 import { Header } from "@/components/landing/header";
 import { Hero } from "@/components/landing/hero";
+import { Audiences } from "@/components/landing/audiences";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { EscrowValue } from "@/components/landing/escrow-value";
 import { AppDownload } from "@/components/landing/app-download";
-import { PanelCta } from "@/components/landing/panel-cta";
 import { BlogPreview } from "@/components/landing/blog-preview";
 import { SeoTopics } from "@/components/landing/seo-topics";
 import { Faq } from "@/components/landing/faq";
@@ -21,9 +21,9 @@ import {
 } from "@/lib/seo/json-ld";
 
 export const metadata = buildPageMetadata({
-  title: "پلتفرم امن و بی‌واسطه تبلیغات اینستاگرام",
+  title: "پلتفرم تبلیغات اینستاگرام برای برند و اینفلوئنسر",
   description:
-    "ادکسپلور — پلتفرم امن و بی‌واسطه تبلیغات اینستاگرام. همکاری مستقیم صاحبان کسب‌وکار و بلاگرها، بدون ریسک پرداخت.",
+    "ادکسپلور پلتفرم همکاری مستقیم برند و اینفلوئنسر در اینستاگرام است. کسب‌وکار کمپین می‌سازد و تبلیغ می‌گیرد؛ اینفلوئنسر پیشنهاد می‌دهد، منتشر می‌کند و درآمدش را می‌گیرد.",
   path: "/",
   keywords: [
     "پلتفرم امن تبلیغات اینستاگرام",
@@ -45,10 +45,10 @@ export default function HomePage() {
       <Header />
       <main id="main-content">
         <Hero />
+        <Audiences />
         <HowItWorks />
         <EscrowValue />
         <AppDownload />
-        <PanelCta />
         <BlogPreview posts={blogPosts} />
         <Faq />
         <SeoTopics />

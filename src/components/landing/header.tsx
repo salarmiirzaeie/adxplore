@@ -3,10 +3,10 @@ import { Logo } from "@/components/brand/logo";
 import { PanelLink } from "@/components/landing/panel-link";
 
 const navLinks = [
+  { href: "/#for-brands", label: "برای برند" },
+  { href: "/#for-influencers", label: "برای اینفلوئنسر" },
   { href: "/#how-it-works", label: "نحوه کار" },
   { href: "/#download", label: "دانلود اپ" },
-  { href: "/guides", label: "راهنماها" },
-  { href: "/blog", label: "مجله" },
   { href: "/#faq", label: "سوالات" },
 ] as const;
 

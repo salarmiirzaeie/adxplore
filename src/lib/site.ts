@@ -28,7 +28,8 @@ export const siteConfig = {
   name: "ادکسپلور",
   nameEn: "AdXplore",
   tagline: "پلتفرم امن و بی‌واسطه تبلیغات اینستاگرام",
-  description: "همکاری مستقیم صاحبان کسب‌وکار و بلاگرها، بدون ریسک پرداخت.",
+  description:
+    "پلتفرم همکاری مستقیم برند و اینفلوئنسر در اینستاگرام. کسب‌وکار کمپین می‌سازد و تبلیغ می‌گیرد؛ اینفلوئنسر محتوا را منتشر می‌کند و درآمدش را با پرداخت امن می‌گیرد.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://adxplore.ir",
   locale: "fa_IR",
   language: "fa",

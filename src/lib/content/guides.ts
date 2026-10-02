@@ -331,6 +331,10 @@ export const guidePages: GuidePage[] = [
         ],
         links: [
           { href: "/blog/chetor-blogger-monaseb-pida-konim", label: "چطور بلاگر مناسب پیدا کنیم؟" },
+          {
+            href: "/blog/tabligat-ba-blogger-rezerv-gharardad-pardakht-amn",
+            label: "تبلیغات با بلاگر: رزرو، قرارداد، پرداخت امن",
+          },
           { href: "/blog/escrow-tabligat-influencer", label: "پرداخت امن در همکاری با بلاگر" },
         ],
       },
@@ -373,6 +377,11 @@ export const guidePages: GuidePage[] = [
           "ادکسپلور کمک می‌کند برندها مسیر همکاری با بلاگر را شفاف‌تر طی کنند و وابستگی به واسطه‌های مبهم را کم کنند. اگر تازه‌کارید، از یک همکاری کوچک و خوب‌تعریف‌شده شروع کنید و بعد مقیاس دهید.",
         ],
         links: [
+          {
+            href: "/blog/tabligat-ba-blogger-rezerv-gharardad-pardakht-amn",
+            label: "راهنمای کامل تبلیغات با بلاگر",
+          },
+          { href: "https://app.adxplore.ir", label: "شروع در پنل ادکسپلور" },
           { href: "/guides/bazaryabi-influencer", label: "راهنمای بازاریابی اینفلوئنسر" },
           { href: "/guides/campain-instagram", label: "ساخت کمپین اینستاگرام" },
         ],

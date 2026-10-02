@@ -40,6 +40,13 @@ export function SeoTopics() {
           <Link href="/guides/hamkari-ba-blogger" className="text-purple hover:underline">
             همکاری با بلاگر
           </Link>
+          {" "}و{" "}
+          <Link
+            href="/blog/tabligat-ba-blogger-rezerv-gharardad-pardakht-amn"
+            className="text-purple hover:underline"
+          >
+            تبلیغات با بلاگر
+          </Link>
         </p>
 
         <nav
@@ -66,6 +73,12 @@ export function SeoTopics() {
             className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
           >
             تعرفه پست و ریلز
+          </Link>
+          <Link
+            href="/blog/tabligat-ba-blogger-rezerv-gharardad-pardakht-amn"
+            className="rounded-full border border-border bg-surface px-4 py-2 text-xs font-medium text-navy transition hover:border-purple/40 hover:bg-purple/5 hover:text-purple"
+          >
+            تبلیغات با بلاگر
           </Link>
           <Link
             href="/blog/tabligat-instagram-foroshgah"

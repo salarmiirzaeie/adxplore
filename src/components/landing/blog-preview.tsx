@@ -9,7 +9,7 @@ export function BlogPreview({ posts }: { posts: BlogPost[] }) {
     <section
       id="blog"
       aria-labelledby="blog-heading"
-      className="border-t border-border bg-surface px-4 py-20 sm:px-6"
+      className="cv-auto border-t border-border bg-surface px-4 py-20 sm:px-6"
     >
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">

@@ -25,7 +25,7 @@ export function EscrowValue() {
     <section
       id="security"
       aria-labelledby="security-heading"
-      className="bg-brand-hero bg-brand-mesh relative overflow-hidden px-4 py-20 sm:px-6"
+      className="cv-auto bg-brand-hero bg-brand-mesh relative overflow-hidden px-4 py-20 sm:px-6"
     >
       <div className="relative mx-auto max-w-6xl">
         <div className="grid items-center gap-12 lg:grid-cols-2">

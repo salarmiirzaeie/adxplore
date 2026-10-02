@@ -10,7 +10,7 @@ export function SeoTopics() {
   return (
     <section
       aria-labelledby="topics-heading"
-      className="border-t border-border bg-surface-elevated px-4 py-16 sm:px-6"
+      className="cv-auto border-t border-border bg-surface-elevated px-4 py-16 sm:px-6"
     >
       <div className="mx-auto max-w-6xl">
         <h2 id="topics-heading" className="sr-only">

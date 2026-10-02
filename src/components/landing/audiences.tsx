@@ -33,7 +33,7 @@ const audiences = [
 
 export function Audiences() {
   return (
-    <section aria-labelledby="audiences-heading" className="bg-white px-4 py-20 sm:px-6">
+    <section aria-labelledby="audiences-heading" className="cv-auto bg-white px-4 py-20 sm:px-6">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="label-brand">برای هر دو طرف</p>

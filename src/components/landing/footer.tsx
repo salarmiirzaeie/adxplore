@@ -8,7 +8,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-white/5 bg-ink px-4 py-14 text-slate-400 sm:px-6">
+    <footer className="cv-auto relative border-t border-white/5 bg-ink px-4 py-14 text-slate-400 sm:px-6">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-l from-transparent via-purple/40 to-transparent"
@@ -159,7 +159,7 @@ export function Footer() {
               </Link>
             </p>
           </div>
-          <div className="rounded-xl bg-white p-1.5 shadow-sm">
+          <div className="w-fit self-start rounded-xl bg-white p-1.5 shadow-sm lg:self-auto">
             <EnamadSeal />
           </div>
         </div>

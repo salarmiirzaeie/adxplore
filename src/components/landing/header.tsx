@@ -12,7 +12,7 @@ const navLinks = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-surface-elevated/85 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-border/60 bg-white">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-[4.5rem] sm:px-6">
         <Link href="/" aria-label="صفحه اصلی ادکسپلور">
           <Logo />

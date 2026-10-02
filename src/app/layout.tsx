@@ -7,12 +7,17 @@ const vazirmatn = Vazirmatn({
   subsets: ["arabic"],
   variable: "--font-vazirmatn",
   display: "swap",
+  preload: true,
+  fallback: ["Tahoma", "Arial"],
 });
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: "700",
   variable: "--font-inter",
   display: "swap",
+  preload: false,
+  fallback: ["Arial"],
 });
 
 export const metadata: Metadata = {

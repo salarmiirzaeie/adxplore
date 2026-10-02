@@ -48,7 +48,7 @@ export function AppDownload() {
     <section
       id="download"
       aria-labelledby="download-heading"
-      className="scroll-mt-24 border-t border-border bg-surface px-4 py-20 sm:px-6"
+      className="cv-auto scroll-mt-24 border-t border-border bg-surface px-4 py-20 sm:px-6"
     >
       <div className="mx-auto max-w-6xl">
         <div className="overflow-hidden rounded-3xl border border-border bg-white shadow-[0_16px_40px_rgba(15,23,42,0.06)]">

@@ -8,18 +8,9 @@ export function Hero() {
       aria-labelledby="hero-heading"
       className="bg-brand-hero bg-brand-mesh relative overflow-hidden px-4 pb-16 pt-12 sm:px-6 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-18"
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-24 top-20 h-80 w-80 rounded-full bg-purple/20 blur-[100px]"
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-16 bottom-10 h-64 w-64 rounded-full bg-purple-deep/30 blur-[80px] animate-pulse-glow"
-      />
-
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12">
         <div className="text-center lg:text-right">
-          <p className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium text-purple-soft backdrop-blur-sm">
+          <p className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-medium text-purple-soft">
             <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_8px_#34D399]" aria-hidden />
             همکاری مستقیم در اینستاگرام، بدون آژانس
           </p>

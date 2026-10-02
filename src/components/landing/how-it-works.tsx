@@ -35,7 +35,7 @@ export function HowItWorks() {
     <section
       id="how-it-works"
       aria-labelledby="how-heading"
-      className="bg-brand-section border-t border-border px-4 py-20 sm:px-6"
+      className="cv-auto bg-brand-section border-t border-border px-4 py-20 sm:px-6"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">

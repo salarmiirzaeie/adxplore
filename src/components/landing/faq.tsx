@@ -5,7 +5,7 @@ export function Faq() {
     <section
       id="faq"
       aria-labelledby="faq-heading"
-      className="border-t border-border bg-surface-elevated px-4 py-20 sm:px-6"
+      className="cv-auto scroll-mt-24 border-t border-border bg-surface-elevated px-4 py-20 sm:px-6"
     >
       <div className="mx-auto max-w-3xl">
         <div className="text-center">
